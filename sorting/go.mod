@@ -1,4 +1,4 @@
-module sorting
+module github.com/MalukiMuthusi/hackerRankChallenges/sorting
 
 go 1.16
 

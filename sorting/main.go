@@ -11,7 +11,7 @@ import (
 
 // Complete the minimumSwaps function below.
 func minimumSwaps(arr []int32) int32 {
-
+	return 0
 }
 
 func main() {

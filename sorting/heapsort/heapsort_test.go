@@ -1,9 +1,9 @@
 package heapsort_test
 
 import (
-	"sorting/heapsort"
 	"testing"
 
+	"github.com/MalukiMuthusi/hackerRankChallenges/sorting/heapsort"
 	"github.com/stretchr/testify/assert"
 )
 
