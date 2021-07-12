@@ -68,3 +68,15 @@ func BuildMaxHeap(a []int) []int {
 	}
 	return a
 }
+
+func HeapSort(a []int) []int {
+	BuildMaxHeap(a)
+	sortedArray := make([]int, 1)
+	for i := len(a) - 1; i > 0; i-- {
+		a[1], a[i] = a[i], a[1]
+		sortedArray = append(sortedArray, a[i])
+		a = a[:len(a)-1]
+		MaxHeapify(a, 1)
+	}
+	return sortedArray
+}

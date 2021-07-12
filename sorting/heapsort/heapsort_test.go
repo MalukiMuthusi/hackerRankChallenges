@@ -172,3 +172,24 @@ func TestBuildMaxHeap(t *testing.T) {
 		})
 	}
 }
+
+func TestHeapSort(t *testing.T) {
+	tests := []struct {
+		name  string
+		input []int
+		out   []int
+	}{
+		{
+			name:  "happy case",
+			input: []int{0, 2, 4, 10, 14, 7, 9, 3, 16, 8, 1},
+			out:   []int{0, 16, 14, 10, 9, 8, 7, 4, 3, 2, 1},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			res := heapsort.HeapSort(tt.input)
+			assert.Equal(t, tt.out, res)
+		})
+	}
+}
