@@ -60,3 +60,11 @@ func MaxHeapify(a []int, i int) {
 	}
 
 }
+
+// BuildMaxHeap, builds a max heap from an array
+func BuildMaxHeap(a []int) []int {
+	for i := len(a) / 2; i > 0; i-- {
+		MaxHeapify(a, i)
+	}
+	return a
+}
