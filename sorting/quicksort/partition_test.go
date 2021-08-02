@@ -13,6 +13,7 @@ func TestPartition(t *testing.T) {
 		A      []int
 		p      int
 		r      int
+		pv     int
 		output int
 	}{
 		{
@@ -20,6 +21,7 @@ func TestPartition(t *testing.T) {
 			A:      []int{2, 8, 7, 1, 3, 5, 6, 4},
 			p:      0,
 			r:      7,
+			pv:     7,
 			output: 3,
 		},
 
@@ -28,13 +30,14 @@ func TestPartition(t *testing.T) {
 			A:      []int{1, 2, 3, 8, 5, 6, 7, 4},
 			p:      0,
 			r:      7,
+			pv:     7,
 			output: 3,
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			n := quicksort.Partion(tt.A, tt.p, tt.r)
+			n := quicksort.Partion(tt.A, tt.p, tt.r, tt.pv)
 			assert.Equal(t, tt.output, n)
 		})
 	}
