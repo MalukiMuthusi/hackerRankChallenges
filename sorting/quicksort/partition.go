@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Partition sorts the array and partitions it into two parts and returns the index
 func Partion(a []int, p int, r int, pv int) int {
 	a[pv], a[r] = a[r], a[pv]
 
@@ -23,6 +24,10 @@ func Partion(a []int, p int, r int, pv int) int {
 }
 
 func RandomizePivot(A []int, p int, r int) int {
+	if (r - p) <= 0 {
+		return p
+	}
+
 	rand.Seed(time.Now().UnixNano())
 	n := rand.Intn(r-p) + p
 	return n
